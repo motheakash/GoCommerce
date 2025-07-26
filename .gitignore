@@ -1,0 +1,37 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go build cache and modules
+/bin/
+/vendor/
+go.sum
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# DB data and migration binaries
+*.db
+migrations/*.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.gen.go

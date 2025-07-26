@@ -1,0 +1,53 @@
+GoCommerce/
+│
+├── cmd/
+│   └── server/
+│       └── main.go                # Entry point
+│
+├── configs/
+│   └── config.yaml                # App-level config (optional)
+│
+├── internal/
+│   ├── user/
+│   │   ├── delivery/              # HTTP handlers and route registration
+│   │   │   └── handler.go
+│   │   ├── model/                 # Domain models
+│   │   │   └── user.go
+│   │   ├── repository/            # Database interaction
+│   │   │   └── postgres.go
+│   │   └── service/               # Business logic
+│   │       └── service.go
+│   │
+│   ├── product/
+│   │   ├── delivery/
+│   │   │   └── handler.go
+│   │   ├── model/
+│   │   │   └── product.go
+│   │   ├── repository/
+│   │   │   └── postgres.go
+│   │   └── service/
+│   │       └── service.go
+│
+├── pkg/
+│   ├── config/                    # Env/config loading utilities
+│   │   └── config.go
+│   ├── db/                        # DB connection
+│   │   └── postgres.go
+│   ├── logger/                    # Logger setup
+│   │   └── logger.go
+│   └── utils/                     # Reusable helpers
+│       └── helpers.go
+│
+├── api/                           # Centralized router setup
+│   └── routes.go
+│
+├── migrations/                    # SQL migration files
+│   ├── 001_create_users.up.sql
+│   ├── 001_create_users.down.sql
+│   ├── 002_create_products.up.sql
+│   └── 002_create_products.down.sql
+│
+├── .env                           # Env variables (PORT, DB credentials, etc.)
+├── go.mod                         # Go module config
+├── go.sum
+└── README.md
